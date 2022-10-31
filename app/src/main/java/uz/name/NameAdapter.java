@@ -15,10 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class NameAdapter extends RecyclerView.Adapter<NameAdapter.TextViewHolder> {
 
-    private ArrayList<String> names;
+    private ArrayList<Name> names;
     private Context mContext;
 
-    public NameAdapter(ArrayList<String> nameList, Context context) {
+    public NameAdapter(ArrayList<Name> nameList, Context context) {
         this.mContext = context;
         this.names = nameList;
     }
@@ -33,12 +33,14 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.TextViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull TextViewHolder holder, int position) {
-        holder.getTextView().setText(names.get(holder.getAdapterPosition()));
+        holder.getTextView().setText(names.get(holder.getAdapterPosition()).getName());
+
+
         holder.getTextView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent narigiOynagaOtuvchi = new Intent(mContext, DescriptionActivity.class);
-                narigiOynagaOtuvchi.putExtra("name", names.get(holder.getAdapterPosition()));
+                narigiOynagaOtuvchi.putExtra("name", names.get(holder.getAdapterPosition()).toString());
                 mContext.startActivity(narigiOynagaOtuvchi);
             }
         });

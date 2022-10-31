@@ -13,6 +13,6 @@ public class DescriptionActivity extends AppCompatActivity {
         setContentView(R.layout.description);
         TextView textView = findViewById(R.id.description_tv);
         String olinganIsm =getIntent().getStringExtra("name");
-        textView.setText("Description: "+olinganIsm);
+        textView.setText(olinganIsm);
     }
 }
