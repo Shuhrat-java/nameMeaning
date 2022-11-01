@@ -28,7 +28,7 @@ public class NameActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         try {
-            InputStream inputStream = getAssets().open("names.json");
+            InputStream inputStream = getAssets().open("merged.json");
             int size = inputStream.available();
             byte[] buffer = new byte[size];
             inputStream.read(buffer, 0, size);
