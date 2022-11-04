@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/FREELANCER/NameMeaning/app/src/main/res/layout/description.xml" value="0.24895833333333334" />
-        <entry key="..\:/FREELANCER/NameMeaning/app/src/main/res/layout/main.xml" value="0.25" />
+        <entry key="..\:/FREELANCER/NameMeaning/app/src/main/res/layout/horizontal.xml" value="0.25" />
+        <entry key="..\:/FREELANCER/NameMeaning/app/src/main/res/layout/main.xml" value="0.4" />
         <entry key="..\:/FREELANCER/NameMeaning/app/src/main/res/layout/name_item.xml" value="0.25" />
+        <entry key="..\:/FREELANCER/NameMeaning/app/src/main/res/layout/recycler_main.xml" value="0.25" />
+        <entry key="..\:/FREELANCER/NameMeaning/app/src/main/res/layout/test.xml" value="0.25" />
       </map>
     </option>
   </component>

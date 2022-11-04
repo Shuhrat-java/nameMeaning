@@ -47,7 +47,7 @@ public class NameActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence enteredText, int i, int i1, int i2) {
                 searchList.clear();
-                if (!enteredText.toString().equals("")) {
+                if (enteredText.toString() != "") {
                     for (Name name : nameList) {
                         if (name.getName().toLowerCase(Locale.ROOT).contains(enteredText.toString().toLowerCase(Locale.ROOT))) {
                             searchList.add(name);
@@ -75,13 +75,9 @@ public class NameActivity extends AppCompatActivity {
             inputStream.close();
 
             Gson gson = new Gson();
-            ArrayList<Name> names = gson.fromJson(jsonContent, new TypeToken<List<Name>>() {
+            nameList = gson.fromJson(jsonContent, new TypeToken<List<Name>>() {
             }.getType());
 
-            nameList = new ArrayList<>();
-            for (Name n : names) {
-                nameList.add(n);
-            }
             nameAdapter = new NameAdapter(nameList, NameActivity.this);
             recyclerView.setAdapter(nameAdapter);
         } catch (IOException e) {
